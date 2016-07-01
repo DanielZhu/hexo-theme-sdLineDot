@@ -1,4 +1,5 @@
 # sdLineDot
+[![NPM version][npm-version-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![License][license-image]][npm-url] 
 
 A brand new minimalist theme for [Hexo] drived by [Xiaodan](http://staydan.com).
 
@@ -98,3 +99,8 @@ All of them are enabled by default. You can edit them in `widget` setting.
 [Hexo]: http://zespia.tw/hexo/
 [Fancybox]: http://fancyapps.com/fancybox/
 [Font Awesome]: http://fontawesome.io/
+
+[license-image]: https://img.shields.io/npm/l/hexo-theme-sdLineDot.svg?maxAge=2592000&style=flat-square
+[downloads-image]: https://img.shields.io/npm/dm/hexo-theme-sdLineDot.svg?maxAge=2592000&style=flat-square
+[npm-version-image]: http://img.shields.io/npm/v/hexo-theme-sdLineDot.svg?maxAge=2592000&style=flat-square
+[npm-url]: https://www.npmjs.com/package/hexo-theme-sdLineDot
