@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div id="header-title" class="site-meta inner">
+    <h1>
+      <%- link_to(url_for(), config.title) %>
+    </h1>
+    <% if (theme.subtitle){ %>
+      <h4 id="subtitle-wrap">
+        <%- link_to(url_for(), theme.subtitle) %>
+      </h4>
+    <% } %>
+  </div>
+  <nav id="site-navs" class="">
+	  <ul>
+      <% for (var i in theme.menu) { %>
+	      <li class="ease-animation header-item-<%=i%>"><%- link_to(url_for(theme.menu[i]), i) %></li>
+	    <% } %>
+	  </ul>
+	  <div class="clearfix"></div>
+	</nav>
+</header>

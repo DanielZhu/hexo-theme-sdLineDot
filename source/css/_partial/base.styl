@@ -1,0 +1,53 @@
+html
+  -ms-touch-action: none
+
+body,ul,li
+  padding: 0
+  border: 0
+
+body
+  position: relative
+  font-size: 14px
+  font-family: ubuntu, helvetica, arial
+  max-width: 1000px
+  margin: 0 auto
+  // overflow: hidden /* this is important to prevent the whole page to bounce */
+
+@font-face
+  font-family: FontAwesome
+  font-style: normal
+  font-weight: normal
+  src: url(font-icon-path + ".eot?v=#" + font-icon-version)
+  src: url(font-icon-path + ".eot?#iefix&v=#" + font-icon-version) format("embedded-opentype"),
+       url(font-icon-path + ".woff?v=#" + font-icon-version) format("woff"),
+       url(font-icon-path + ".ttf?v=#" + font-icon-version) format("truetype"),
+       url(font-icon-path + ".svg#fontawesomeregular?v=#" + font-icon-version) format("svg")
+
+a
+  text-decoration: none
+  &:link
+    color: #196811
+  &:hover
+    color: #074600
+  &:visited
+    color: #196811
+.sm-font
+  font-size: 12px
+.button
+  min-width: 80px
+  color: #A1A1A1
+  cursor: pointer
+  text-align: center
+  padding: 5px 4px
+  border-bottom: 1px solid #92D18B
+  margin: 0px 6px
+  &:hover
+    color: #fff
+    background-color: #074600
+.ease-animation
+	transition: all 300ms ease
+.dot-separator
+  margin: 0px 10px
+  font-size: 0.5em !important
+  color: #A1A1A1
+  vertical-align: middle

@@ -1,0 +1,50 @@
+.tags-selection
+    position: fixed;
+    right: 0px;
+    top: 5px;
+    z-index: 10;
+    width: 80px;
+    height: auto;
+    border: 1px dashed #BEDCB5;
+    background-color: #F3F3F3;
+    .tags-selection-header
+        position: relative;
+        cursor: move;
+        border-bottom: 1px dashed #BEDCB5;
+        .tags-selection-header-label
+            padding: 10px 0px 10px 10px;
+            vertical-align: middle;
+    #tags-selection-panel
+        font-size: 12px;
+        opacity: 1;
+        display: none;
+        .tags-selection-navs
+            margin-bottom: 15px;
+            padding: 5px 0px;
+            .tags-selection-nav
+                margin-right: 2px;
+                padding: 10px 5px;
+                font-size: 14px;
+                border-bottom: 1px solid #BEDCB5;
+                &.active
+                    color: #317D25;
+                    border-bottom: 4px solid #BEDCB5;
+        .tags-selection-content
+            padding: 5px;
+            max-height: 280px;
+            overflow-y: auto;
+            line-height: 25px;
+            .tags-selection-content-part
+                .tag-instant
+                      float: left;
+                      color: #a1a1a1;
+                      cursor: pointer;
+                      text-align: center;
+                      padding: 0px 4px;
+                      border-bottom: 1px solid #92d18b;
+                      margin: 3px 3px;
+                      &:hover
+                        color: #fff;
+                        background-color: #074600;
+        .tag-selection-badge
+            padding-left: 2px;

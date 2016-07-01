@@ -1,0 +1,35 @@
+<% if (pagination == 2){ %>
+  <% page.posts.each(function(post){ %>
+    <%- partial('article', {post: post, index: true}) %>
+  <% }) %>
+  <% if (page.total > 1){ %>
+    <nav id="page-nav" class="ease-animation">
+      <%- paginator({
+        prev_text: '&laquo; Prev',
+        next_text: 'Next &raquo;'
+      }) %>
+    </nav>
+  <% } %>
+<% } else { %>
+  <% var last; %>
+  <% page.posts.each(function(post, i){ %>
+    <% var year = post.date.year(); %>
+    <% if (last != year){ %>
+      <% if (last != null){ %>
+        </section>
+      <% } %>
+      <% last = year; %>
+      <section class="archive-year">
+        <i class="fa fa-circle dot-separator"></i>
+        <span class="archive-year-label">
+          <%- link_to(url_for('archives/' + year), year, {class: 'archive-year'}) %>
+        </span>
+      </section>
+      <section class="archive-post-section">
+    <% } %>
+    <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+  <% }) %>
+  <% if (page.posts.length){ %>
+    </section>
+  <% } %>
+<% } %>

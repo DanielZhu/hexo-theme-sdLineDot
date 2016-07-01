@@ -1,0 +1,31 @@
+<% if (post.prev || post.next){ %>
+<div class="link-to-article"> 
+  <div class="link-to-article-next">
+  <% if (post.next){ %>
+    <% if (post.next.title){ %>
+      <div class="article-nav-date">
+        <%= date(post.next.date) %>
+      </div>
+      <div class="article-nav-title">
+        <%- link_to(url_for(post.next.path), post.next.title, {class: ''}) %>
+      </div>
+    <% } %> 
+  <% } %>
+  </div>
+  <div class="link-to-article-separator">
+    <i class="fa fa-circle dot-separator"></i>
+  </div>
+  <div class="link-to-article-prev">
+  <% if (post.prev){ %>
+    <% if (post.prev.title){ %>
+      <div class="article-nav-date">
+        <%= date(post.prev.date) %>
+      </div>
+      <div class="article-nav-title">
+        <%- link_to(url_for(post.prev.path), post.prev.title, {class: ''}) %>
+      </div>
+    <% } %>    
+  <% } %>
+  </div>
+</div>
+<% } %>

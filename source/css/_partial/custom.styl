@@ -1,0 +1,64 @@
+// @import "node_modules/highlight/lib/vendor/highlight.js/styles/default.css"
+
+
+/*---------------------- Font ---------------------*/
+
+html
+  height: 100%
+
+body
+  font-family: "aller-light"
+  font-size: 14px
+  color: #30404f
+  padding: 0
+.container
+  position:relative
+  width: 100%
+  > div
+    clear: both
+  ul
+    -webkit-padding-start: 0px
+    list-style: none
+    margin: 0
+.row
+  min-height: 60px
+  width: 100%
+  line-height: 60px
+
+/*---------------------- Low resolutions (> 320px) ---------------------*/
+@media only screen and (min-width: 320px) and (max-width: 600px)
+  .code
+    margin-left: 200px
+  .comment
+    width: 200 - 40px
+  #handler-vertical
+    width: 200px
+  .background
+    width: 200px
+  .article-footer
+      min-height: 25px
+      height: initial
+      display: block
+      .article-footer-left
+          float: left
+          display: block
+      .article-footer-right
+          clearfix()
+          float: none
+          display: inline-block
+  .article-index
+      margin: 20px 10px
+
+/*---------------------- (> 1025px) ---------------------*/
+@media only screen and (min-width: 1025px)
+  .code
+    margin-left: 450px
+
+  .comment
+    width: 450 - 40px
+
+  #handler-vertical
+    width: 450px
+
+  .background
+    width: 450px

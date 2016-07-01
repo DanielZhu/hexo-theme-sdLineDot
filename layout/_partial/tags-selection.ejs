@@ -1,0 +1,22 @@
+<div class="tags-selection-navs" title="Sorted by the first English alphabet.">
+	<% 
+		for (var i = 0; i< navs.length; i++) { 
+			var nav = navs[i];%>
+			<label class="tags-selection-nav <% if( navActive === i) { %>active<% } %>" navid="<%= (nav.start + nav.end).toLowerCase() %>"><%= nav.start + ' - ' + nav.end %></label>
+	<%}%>
+</div>
+<div class="tags-selection-content">
+	<% for (var j = 0; j < navs.length; j++) { 
+			var nav = navs[j];%>
+			<section id="tags-selection-content-<%= (nav.start + nav.end).toLowerCase() %>" class="tags-selection-content-section">
+				<% for (var i = 0; i< tags[j].length; i++) {
+					var tag = tags[j][i]; %>
+					<span class="button" tagid="<%=tag._id%>">
+						<% if (tagActiveId !== null && tagActiveId === tag._id) {%>
+							<span class="fa fa-check"></span><% 
+						} %>
+						<%= tag.slug %><sup class="tag-selection-badge"><%= tag.posts.length %><sup></span>
+				<% } %>
+			</section>
+	<% } %>
+</div>

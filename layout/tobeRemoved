@@ -1,0 +1,6 @@
+<% page.posts.each(function(post){ %>
+	<% JSON.stringify(post) %> 
+	<% post.tags.each(function(tag){ %>
+	<%  JSON.stringify(tag) %>
+	<% }) %>
+<% }) %>

@@ -1,0 +1,246 @@
+.article-index, .archive-post
+    margin: 20px 0px
+    width: 60%
+.article-header
+    margin: 10px 0px
+    .article-meta
+        padding: 8px 5px
+        width: 100%
+    .article-category
+        float: left
+        &:before
+            content: "\f0c9"
+            font-family: FontAwesome
+        padding-right: 8px
+    .article-updated
+        float: right
+        color: #999
+        &:before
+            content: "\f017"
+            font-family: FontAwesome
+            padding-right: 8px
+    .article-title
+        clear: both
+        font-size: 25px
+        font-weight: bold
+        padding: 5px 0px
+.article-entry
+    @extend $base-style
+    clearfix()
+    color: color-default
+    padding: 0 article-padding
+    margin: 0 auto
+    width: 60%
+    p, table
+        line-height: line-height
+        margin: line-height 0
+    h1, h2, h3, h4, h5, h6
+        font-weight: bold
+    h1, h2, h3, h4, h5, h6
+        line-height: line-height-title
+        margin: line-height-title 0
+    a
+        color: color-link
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+    ul, ol, dl
+        margin-top: line-height
+        margin-bottom: line-height
+    img, video
+        max-width: 100%
+        height: auto
+        display: block
+        margin: auto
+    iframe
+        border: none
+    table
+        width: 100%
+        border-collapse: collapse
+        border-spacing: 0
+    th
+        font-weight: bold
+        border-bottom: 3px solid color-border
+        padding-bottom: 0.5em
+    td
+        border-bottom: 1px solid color-border
+        padding: 10px 0
+    blockquote
+        font-family: font-serif
+        font-size: 1.4em
+        margin: line-height 20px
+        text-align: center
+        footer
+            font-size: font-size
+            margin: line-height 0
+            font-family: font-sans
+        cite
+            &:before
+                content: "—"
+                padding: 0 0.5em
+    .pullquote
+        text-align: left
+        width: 45%
+        margin: 0
+        &.left
+            margin-left: 0.5em
+            margin-right: 1em
+        &.right
+            margin-right: 0.5em
+            margin-left: 1em
+    .caption
+        color: color-grey
+        display: block
+        font-size: 0.9em
+        margin-top: 0.5em
+        position: relative
+        text-align: center
+    // http://webdesignerwall.com/tutorials/css-elastic-videos
+    .video-container
+        position: relative
+        padding-top: (9 / 16 * 100)% // 16:9 ratio
+        height: 0
+        overflow: hidden
+        iframe, object, embed
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            margin-top: 0
+.archive-post-section
+    position: relative
+    float: left
+    clear: both
+    width: 100%
+    padding-left: 25px
+    .archive-post
+        position: relative
+        width: 30%
+        overflow: hidden
+        float: left
+        margin: 10px 1%
+        min-height: 100px
+        box-sizing: border-box
+    .article-header
+        .article-meta
+            .article-category
+                float: left
+            .article-updated
+                float: right
+        .article-title
+            font-size: 15px
+.article-index-section
+    .article-index
+        margin-top: 30px
+    .article-main
+        clear: both
+        margin: 20px 10px 5px 0px
+    p
+        line-height: 1.6em
+        margin: 1.6em 0
+.article-footer
+    padding: 10px 5px
+    height: 25px
+    display: block
+    .article-footer-left
+        float: left
+        display: inline-block
+    .article-footer-right
+        float: right
+        display: inline-block
+    .tag-list
+        float: left
+        .tag-list-item
+            float: left
+            padding: 4px
+            margin: 0px 1px
+            &:hover
+                color: #fff
+                background-color: #074600
+                a
+                    color: #fff !important
+            &:before
+                content: "\f02b"
+                font-family: FontAwesome
+                padding-right: 8px
+    .comments
+        font-size: 12px
+        padding: 0px 5px
+    .read-more
+        float: right
+    .save-pocket
+        float: right
+    .others
+        float: right
+
+.link-to-article
+    position: relative
+    width: 100%
+    margin: 10px 0px 30px 0px
+    .link-to-article-next
+        float: left
+        text-align: right
+        width: 48%
+    .link-to-article-separator
+        float: left
+        margin-top: 10px
+        width: 4%
+        text-align: center
+    .link-to-article-prev
+        text-align: left
+        float: right
+        width: 48%
+    .article-nav-date
+        color: #ddd
+    .article-nav-title
+        padding: 5px 0px
+.archive-year
+    font-size: 25px
+    position: relative
+    width: 100%
+    padding: 20px 0px
+    clear: both
+    .archive-year-label
+        font-size: 25px
+
+#comments
+    clear: both
+
+#page-nav
+    clearfix()
+    margin: block-margin auto
+    background: #fff
+    border: 1px solid color-border
+    border-radius: 3px
+    text-align: center
+    color: color-grey
+    overflow: hidden
+    a, span
+        padding: 10px 20px
+        line-height: 1
+        height: 2ex
+    a
+        color: color-grey
+        text-decoration: none
+        &:hover
+            background: #074600
+            color: #fff
+    .prev
+        float: left
+    .next
+        float: right
+    .page-number
+        display: inline-block
+        @media mq-mobile
+            display: none
+    .current
+        color: color-default
+        font-weight: bold
+    .space
+        color: color-border
+
+
+@media screen and (min-width: 480px)
+    .article-index, .archive-post
+        width: 100%

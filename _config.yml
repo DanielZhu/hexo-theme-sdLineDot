@@ -1,0 +1,13 @@
+# Menu for this theme, display on the top right
+menu:
+  Home: /
+  Archives: /archives
+  About: /about
+  Logs: /logs
+
+# Content
+excerpt_link: Read More
+fancybox: true
+
+widgets:
+- grouped_tag

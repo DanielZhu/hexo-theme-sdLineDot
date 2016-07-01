@@ -1,0 +1,11 @@
+<article class="archive-post ease-animation">
+  <header class="article-header">
+    <% if (post.link || post.title){ %>
+      <%- partial('post/title', {class_name: 'article-title'}) %>
+    <% } %>
+    <div class="article-meta sm-font">
+      <%- partial('post/category', {depth: 1}) %>
+      <%- partial('post/date', {class_name: 'article-updated', date_format: 'YY/MM/DD HH:MM'}) %>
+    </div>
+  </header>
+</article>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<%- partial('_partial/head') %>
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+      <div class="outer clearfix">
+        <section id="main"><%- partial('_widget/grouped_tag') %><%- body %></section>
+      </div>
+      <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+    </div>
+    <%- partial('_partial/after-footer') %>
+  </div>
+</body>
+</html>

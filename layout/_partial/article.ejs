@@ -1,0 +1,41 @@
+<article id="<%= post.layout %>-<%= post.slug %>"  class="<% if (index) {%>article-index<%}%> ease-animation">
+  <header class="article-header">
+    <% if (post.link || post.title){ %>
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+    <% } %>
+    <div class="article-meta sm-font">
+      <%- partial('post/category', {depth: 0}) %>
+      <%- partial('post/date', {class_name: 'article-updated', date_format: 'YY/MM/DD HH:MM'}) %>
+    </div>
+  </header>
+  <div class="article-entry">
+  <% if (post.excerpt && index){ %>
+    <%- post.excerpt %>
+  <% } else { %>
+    <%- post.content %>
+  <% } %>
+  </div>
+  <footer class="article-footer">
+    <div class="article-footer-left">
+      <a href="hexo_post.html#disqus" class="article-footer-left"><span class="comments"><i class="fa fa-comments"></i> 0 Comment</span></a>
+      <i class="fa fa-circle dot-separator"></i>
+    </div>
+    <%- partial('post/tag') %>
+    <div class="article-footer-right">
+    <% if (theme.excerpt_link && index){ %>
+      <a href="<%- url_for(post.path) %>"><span class="read-more button sm-font ease-animation"><i class="fa fa-angle-right pull-right"></i><%= theme.excerpt_link %></span></a>
+    <% } %>
+      <a href="hexo_post.html"><span class="save-pocket button sm-font ease-animation"><i class="fa fa-share"></i> Share</span></a>
+    </div>
+  </footer>
+</article>
+<% if (!index){ %>
+  <%- partial('post/nav') %>
+<% } %>
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<% } %>
