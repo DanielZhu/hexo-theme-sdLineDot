@@ -3,7 +3,7 @@
     <% if (post.link || post.title){ %>
         <%- partial('post/title', {class_name: 'article-title'}) %>
     <% } %>
-    <div class="article-meta sm-font">
+    <div class="article-meta sm-font clearfix">
       <%- partial('post/category', {depth: 0}) %>
       <%- partial('post/date', {class_name: 'article-updated', date_format: 'YY/MM/DD HH:MM'}) %>
     </div>
@@ -15,11 +15,11 @@
     <%- post.content %>
   <% } %>
   </div>
-  <footer class="article-footer">
+  <footer class="article-footer clearfix">
     <div class="article-footer-left">
-      <a href="hexo_post.html#disqus" class="article-footer-left"><span class="comments"><i class="fa fa-comments"></i> 0 Comment</span></a>
-      <i class="fa fa-circle dot-separator"></i>
+      <a href="hexo_post.html#disqus" class="article-footer-left"><span class="comments"><i class="fa fa-comments"></i> 0</span></a>
     </div>
+    <i class="fa fa-circle dot-separator"></i>
     <%- partial('post/tag') %>
     <div class="article-footer-right">
     <% if (theme.excerpt_link && index){ %>

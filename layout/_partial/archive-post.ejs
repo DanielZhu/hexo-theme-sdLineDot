@@ -3,7 +3,7 @@
     <% if (post.link || post.title){ %>
       <%- partial('post/title', {class_name: 'article-title'}) %>
     <% } %>
-    <div class="article-meta sm-font">
+    <div class="article-meta sm-font clearfix">
       <%- partial('post/category', {depth: 1}) %>
       <%- partial('post/date', {class_name: 'article-updated', date_format: 'YY/MM/DD HH:MM'}) %>
     </div>

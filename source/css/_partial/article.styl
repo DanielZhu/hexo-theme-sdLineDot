@@ -47,6 +47,10 @@
     ul, ol, dl
         margin-top: line-height
         margin-bottom: line-height
+    li
+        margin-top: 2px
+        line-height: line-height
+        list-style-type: circle
     img, video
         max-width: 100%
         height: auto
@@ -116,10 +120,9 @@
     padding-left: 25px
     .archive-post
         position: relative
-        width: 30%
+        width: 100%
         overflow: hidden
-        float: left
-        margin: 10px 1%
+        margin: 10px
         min-height: 100px
         box-sizing: border-box
     .article-header
@@ -128,7 +131,9 @@
                 float: left
             .article-updated
                 float: right
+                margin-right: 10px
         .article-title
+            line-height: 1.5
             font-size: 15px
 .article-index-section
     .article-index
@@ -137,24 +142,23 @@
         clear: both
         margin: 20px auto 5px auto
     p
-        line-height: 1.6em
-        margin: 1.6em 0
+        line-height: line-height
+        margin: line-height 0
 .article-footer
     padding: 10px 5px
-    height: 25px
-    display: block
+    min-height: 25px
+    display: flex
+    align-items: center
     .article-footer-left
-        float: left
-        display: inline-block
+        min-width: 20px
     .article-footer-right
-        float: right
-        display: inline-block
+        min-width: 100px
     .tag-list
-        float: left
+        flex: 2
         .tag-list-item
-            float: left
-            padding: 4px
+            padding: 6px
             margin: 0px 1px
+            display: inline-block
             &:hover
                 color: #fff
                 background-color: #074600
@@ -177,7 +181,7 @@
 .link-to-article
     position: relative
     width: 100%
-    margin: 10px 0px 30px 0px
+    margin: 50px 0 20px 0
     .link-to-article-next
         float: left
         text-align: right
@@ -243,4 +247,4 @@
 
 @media screen and (min-width: 480px)
     .article-index, .archive-post
-        width: 60%
+        width: 100%

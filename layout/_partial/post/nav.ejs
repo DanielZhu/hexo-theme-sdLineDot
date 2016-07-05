@@ -1,5 +1,5 @@
 <% if (post.prev || post.next){ %>
-<div class="link-to-article"> 
+<div class="link-to-article clearfix">
   <div class="link-to-article-next">
   <% if (post.next){ %>
     <% if (post.next.title){ %>
@@ -9,7 +9,7 @@
       <div class="article-nav-title">
         <%- link_to(url_for(post.next.path), post.next.title, {class: ''}) %>
       </div>
-    <% } %> 
+    <% } %>
   <% } %>
   </div>
   <div class="link-to-article-separator">
@@ -24,7 +24,7 @@
       <div class="article-nav-title">
         <%- link_to(url_for(post.prev.path), post.prev.title, {class: ''}) %>
       </div>
-    <% } %>    
+    <% } %>
   <% } %>
   </div>
 </div>
