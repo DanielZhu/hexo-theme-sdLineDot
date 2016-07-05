@@ -1,7 +1,7 @@
 {
   "name": "hexo-theme-sdlinedot",
   "description": "Hexo theme provided by Xiaodan(staydan.com), focus on Line and Dot.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "DanielZhu &lt;enterzhu@gmail.com&gt;",
   "repository": {
     "type": "git",
